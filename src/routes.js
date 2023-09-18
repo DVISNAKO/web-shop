@@ -1,31 +1,37 @@
 import { ADMIN_ROUTE, BASKET_ROUTE, DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "./util/consts"
+import Admin from './pages/Admin';
+import Basket from './pages/Basket';
+import Shop from './pages/Shop';
+import DevicePage from './pages/DevicePage';
+import Auth from './pages/Auth';
+
 
 export const authRoutes = [
     {
         path: ADMIN_ROUTE,
-        Component: Admin
+        element: <Admin/>
     },
     {
         path: BASKET_ROUTE,
-        Component: Basket
+        element: <Basket/>
     }
 ]
 
 export const publicRoutes = [
     {
         path: SHOP_ROUTE,
-        Component: Shop
+        element: <Shop/>
     },
     {
         path: LOGIN_ROUTE,
-        Component: Auth
+        element: <Auth/>
     },
     {
         path: REGISTRATION_ROUTE,
-        Component: Auth
+        element: <Auth/>
     },
     {
         path: DEVICE_ROUTE + '/:id',
-        Component: DevicePage
+        element: <DevicePage/>
     }
 ]
